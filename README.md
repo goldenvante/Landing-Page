@@ -9,7 +9,7 @@ Design used as a reference:
 
 ![Design used as reference](./images/Diseño.png)
 
-My finished webpage for this project (or [click here](https://github.com/goldenvante/Landing-Page) to see a live preview):
+My finished webpage for this project (or [click here](https://goldenvante.github.io/Landing-Page/) to see a live preview):
 
 ![My finished webpage for this project](./images/Inicio.png)
 
