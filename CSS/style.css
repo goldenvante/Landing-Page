@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --clr-neon: hsl(189, 83%, 54%);
+    --blue-neon: rgb(162, 74, 245);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-image: 
+        radial-gradient(rgba(0, 123, 255, 0.5), rgba(32, 32, 32, 0.5)),
+        url('../images/Fondo.jpg');
+    background-size: cover;
+    color: #fff;
+}
+
+h1, h2 {
+    margin-bottom: 15px;
+}
+
+header p, button, nav a, h4 {
+    font-size: 18px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* Navegación */
+nav {
+    background-color: #000;
+    color: #fff;
+    height: 60px;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 1em var(--clr-neon), 0 0 0.45em currentColor;
+}
+
+nav a:hover {
+    color: var(--clr-neon);
+}
+
+/* Header corregido para evitar el colapso */
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(40, 21, 70, 0.7));
+    min-height: 85vh;
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+header .hero-text {
+    max-width: 500px;
+}
+
+header h1 {
+    font-size: 48px;
+}
+
+header .crop-container {
+    margin-top: 0;
+    width: 100%;                  /* O ajusta a los pixeles exactos del ancho de tu imagen, ej: 600px */
+    max-width: 600px;             /* Limita el ancho máximo para que no se expanda de más */
+    height: auto;                 /* Permite que la altura sea automática según la proporción de la imagen */
+    overflow: hidden;
+    border: 2px solid var(--blue-neon); /* Borde azul de neón ajustado al contorno */
+    border-radius: 0.5em;
+    box-shadow: 
+        inset 0 0 1em 0 #0f94ac, 
+        0 0 1.5em 0 var(--blue-neon);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .crop-container img {
+    width: 100%;                  /* Hace que la imagen llene exactamente el ancho del contenedor */
+    height: auto;                 /* Mantiene la proporción original de la imagen intacta */
+    display: block;               /* Elimina espacios fantasma debajo de la imagen */
+    margin-top: 0;                /* Remueve cualquier desplazamiento negativo previo */
+}
+
+button {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.neon-button {
+    display: inline-block;
+    margin: 30px 0 15px;
+    width: 160px;
+    height: 50px;
+    cursor: pointer;
+    background: none;
+    color: var(--clr-neon);
+    border: var(--clr-neon) 4px solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    position: relative;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+    box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+}
+
+.neon-button:hover, .neon-button:focus {
+    background: var(--clr-neon);
+    color: #31202b;
+    text-shadow: none;
+}
+
+/* Sección de Libros adaptada al HTML proporcionado */
+.Libros {
+    padding: 60px 0;
+}
+
+.Libros .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1em;
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
+    margin: 50px auto;
+    padding: 40px 20px;
+    max-width: 1200px;
+}
+
+.Libros h2 {
+    font-size: 36px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+/* Cajas de imágenes dispuestas en fila horizontal */
+.Libros ul.boxes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.Libros ul.boxes li {
+    background-size: cover;
+    background-position: center;
+    height: 220px;
+    width: 220px;
+    border: 4px solid var(--blue-neon);
+    border-radius: 1em;
+    box-shadow: inset 0 0 0.5em 0 #89cdf5, 0 0 1em 0 #b57cff;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+/* Asignación de imágenes de fondo para cada tarjeta de tu HTML */
+.Libros ul.boxes li:nth-child(1) { background-image: url('../images/TLH.jpg'); }
+.Libros ul.boxes li:nth-child(2) { background-image: url('../images/CNMEQC.jpg'); }
+.Libros ul.boxes li:nth-child(3) { background-image: url('../images/AYOP.jpg'); }
+.Libros ul.boxes li:nth-child(4) { background-image: url('../images/EADSN.jpg'); }
+
+.Libros ul.boxes li h3 {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background: rgba(20, 0, 40, 0.9);
+    transition: opacity 0.3s ease;
+}
+
+.Libros ul.boxes li:hover h3 {
+    opacity: 1;
+}
+
+/* Subtextos alineados horizontalmente debajo de cada caja correspondiente */
+.Libros ul.subtext {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    
+}
+
+/* Subtextos alineados horizontalmente debajo de cada caja correspondiente */
+.Libros ul.subtext {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.Libros ul.subtext li {
+    width: 220px;
+    text-align: center;
+}
+
+.Libros ul.subtext p {
+    font-size: 13px;
+    line-height: 1.4;
+    color: #ddd;
+    text-align: justify;       /* <-- ESTO JUSTIFICA EL TEXTO */
+    margin-top: 10px;         /* <-- Espacio opcional para separarlo del recuadro */
+}
+
+/* Sección de Cita */
+.quote {
+    min-height: 400px;
+    background: radial-gradient(rgb(53, 69, 214), rgb(154, 67, 212));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.quote h3 {
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 28px;
+    max-width: 800px;
+}
+
+.quote h4 {
+    text-align: right;
+    margin-top: 15px;
+}
+
+.quote h4::before {
+    content: "\2014\0020";
+    font-family: 'Gelasio', serif;
+}
+
+.quote h3::before {
+    font-family: 'Gelasio', serif;
+    content: "\201c";
+    font-size: 80px;
+    display: block;
+    margin-bottom: -30px;
+    margin-top: -10px;
+}
+
+/* Call-to-action (for-more-info) corregido para que el botón no desuene */
+.for-more-info {
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.for-more-info .container {
+    height: auto;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 0.50em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px 40px;
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(132, 41, 206, 0.85));
+}
+
+.for-more-info .container > div {
+    flex: 1;
+    min-width: 280px;
+}
+
+/* Footer */
+footer {
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+}
+
+footer p {
+    padding-bottom: 5px;
+}
